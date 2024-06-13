@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: theme('colors.gray.50');
+  background-color: theme('colors.gray.800');
+}
+
+#__nuxt {
+  height: 100vh; /* 设置高度为视口高度的 100% */
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.gray.600');
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.gray.600');
+}
