@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useStore } from 'vuex'
 import { useNuxtApp } from '#app'
 import { MutationTypes } from '~/store/constants'
@@ -24,8 +24,9 @@ const createIns = ()=> {
   if(container.value){
     container.value.appendChild(wrapper);
   }
+  console.log(props.markdownContent)
   const editor = nuxtApp.$createEditor(wrapper,{
-    value:props.markdownContent
+    value:props.markdownContent || ''
   })
   editor.on('change', () => {
     uStore.commit(MutationTypes.SET_CONTENT,editor.getValue())

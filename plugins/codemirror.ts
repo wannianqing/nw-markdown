@@ -33,7 +33,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         'Ctrl-I': (editor) => shortcutHandler('italic', editor),
         'Ctrl-D': (editor) => shortcutHandler('strikethrough', editor),
       },
-      ...options,
+      ...options
     });
     return codemirror
   }
