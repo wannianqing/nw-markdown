@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   },
   css:['~/assets/css/globals.css'],
   plugins: [  // 配置插件
-    '~/plugins/global-components.ts'
+    '~/plugins/global-components.ts',
+    { src:'~/plugins/codemirror.ts', mode:'client' }
   ],
 })
