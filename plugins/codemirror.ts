@@ -18,7 +18,7 @@ import { defineNuxtPlugin } from '#app';
 import { shortcutHandler } from '~/utils'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const createEditor = (element:HTMLElement,options= {} )=> {
+  const createEditor:any = (element:HTMLElement,options= {} )=> {
     if (!element) return console.error('必须传入一个element标签元素');
     const codemirror = CodeMirror(element, {
       value: '',

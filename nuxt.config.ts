@@ -12,9 +12,10 @@ export default defineNuxtConfig({
       title:'Markdown-Editor'
     }
   },
-  css:['~/assets/css/globals.css'],
+  css:['~/assets/css/globals.css', 'highlight.js/styles/atom-one-dark.css'],
   plugins: [  // 配置插件
     '~/plugins/global-components.ts',
+    '~/plugins/vuex.ts',
     { src:'~/plugins/codemirror.ts', mode:'client' }
   ],
 })

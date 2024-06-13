@@ -1,75 +1,40 @@
-# Nuxt 3 Minimal Starter
+## Markdown编辑器
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+此Markdown编辑器项目免费且作为开源学习使用，你可以通过该项目学习提升编码能力，项目在持续更新实现中，欢迎贡献~😄
 
-## Setup
 
-Make sure to install the dependencies:
 
-```bash
-# npm
-npm install
+## 👇技术栈
 
-# pnpm
-pnpm install
+- NuxtJs + TypeScript
+- TailwindCSS + postcss + autoprefixer
+- Codemirror + showdown + highlight.js
+- vue-material-design-icons
 
-# yarn
-yarn install
 
-# bun
-bun install
-```
 
-## Development Server
+## 😀本地运行调试
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
+```powershell
+# 代码下拉
+git clone https://github.com/wannianqing/nw-markdown.git
+# 初始化
+yarn
+# 运行
 yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
 
-Build the application for production:
 
-```bash
-# npm
-npm run build
+## 🕔待实现
 
-# pnpm
-pnpm run build
+- [ ] tool工具功能实现
+- [ ] tooltip组件实现
+- [ ] 导出功能实现
+- [ ] ...
 
-# yarn
-yarn build
 
-# bun
-bun run build
-```
 
-Locally preview production build:
+## 📱讨论交流
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+关注微信公众号“前端冲击营”，添加作者好友邀请进群

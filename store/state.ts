@@ -1,2 +1,8 @@
 
-export const state = {}
+export interface State {
+  content:string;
+}
+
+export const state:State = {
+  content:''
+}

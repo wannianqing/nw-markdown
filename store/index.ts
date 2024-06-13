@@ -1,3 +1,9 @@
 import { createStore } from 'vuex'
-
-export const store = createStore({})
+import { state } from './state'
+import { mutations } from './mutations'
+import { getters } from './getters'
+export const store = createStore({
+  state,
+  getters,
+  mutations
+})

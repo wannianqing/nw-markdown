@@ -4,9 +4,18 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed } from 'vue';
+import { useStore } from 'vuex'
 import { useNuxtApp } from '#app'
+import { MutationTypes } from '~/store/constants'
 defineOptions({ name:'NwEditor' })
+const props = defineProps({
+  markdownContent:{
+    type:String,
+    defualt:''
+  }
+})
+const uStore = useStore()
 const nuxtApp = useNuxtApp()
 const container = ref<HTMLDivElement | null>(null);
 const createIns = ()=> {
@@ -15,9 +24,11 @@ const createIns = ()=> {
   if(container.value){
     container.value.appendChild(wrapper);
   }
-  const editor = nuxtApp.$createEditor(wrapper)
+  const editor = nuxtApp.$createEditor(wrapper,{
+    value:props.markdownContent
+  })
   editor.on('change', () => {
-    console.log(editor.getValue(),'======')
+    uStore.commit(MutationTypes.SET_CONTENT,editor.getValue())
   });
 }
 onMounted(createIns)
